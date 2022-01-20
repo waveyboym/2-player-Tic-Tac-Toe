@@ -1,2 +1,6 @@
 # 2-player-Tic-Tac-Toe
 A coding challenge, 2-player tic-tac-toe with a dynamically changing background and dynamically changing text
+
+So the way this works is really quite simple. Each of the nine tiles use javascript onclick events and these onclick events call on the main driver function and pass in a number. This number indicates which function was called and in turn which tile the onclick event occured. A global variable exists which lets the main driver function know which player's turn it is then depending on which player's turn it is, this then updates the text on the website with an X or O and changes the numbers within another global array to either 1 or 2. This is the updatePosition function's job.
+A function to checks whether within this 2d array, if there are three consecutive 1's or 2's following one after the other after the updating is complete to confirm a player has a won or not then the game ends if a player does indeed win.
+Another function runs to check if a draw has been reached after each an every update. The 2-d global array is initialised to complete 0's and is slowly filled with 1's and 2's depending on the player who places them there. So when the gameDraw function runs, it simply checks if there are any 0's left within the arry. If not and no player has won, the game is a draw. If there are still 0's, the game continues
